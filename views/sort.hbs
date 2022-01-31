@@ -1,0 +1,16 @@
+<div id="menuadmin">
+    <a class="menuadmintext" href="/sort">sort</a>
+    <a class="menuadmintext" href="/gender">gender</a>
+    <a class="menuadmintext" href="/show">show</a>
+</div>
+<div id="tabelka">
+    <form action="/sortby" method="POST" onchange="this.submit()">
+        <label>malejąco: </label>
+        <input type="radio" name="sort" value="malejaco">
+        <label>rosnąco: </label>
+        <input type="radio" name="sort" value="rosnaco">
+    </form>
+</div>
+<script>
+    document.getElementById("body").style.backgroundColor = "yellow"
+</script>

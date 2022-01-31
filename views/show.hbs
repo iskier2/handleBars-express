@@ -1,0 +1,26 @@
+<div id="menuadmin">
+    <a class="menuadmintext" href="/sort">sort</a>
+    <a class="menuadmintext" href="/gender">gender</a>
+    <a class="menuadmintext" href="/show">show</a>
+</div>
+<div id="tabelka">
+    <table>
+        {{#each users }}
+        <tr>
+            <td style="width: 150px;" class="td">id: {{id}}</td>
+            <td class="td">user: {{login}} - {{password}}</td>
+            <td style="width: 150px;" class="td">uczen: <input type="checkbox" id="user{{id}}" disabled></td>
+            <td style="width: 150px;" class="td">wiek: {{wiek}}</td>
+            <td style="width: 150px;" class="td">plec: {{plec}}</td>
+            <script>
+                if ({{ uczen }}) {
+                    document.getElementById("user" + {{ id }}).checked = true
+                }
+            </script>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+<script>
+    document.getElementById("body").style.backgroundColor = "yellow"
+</script>

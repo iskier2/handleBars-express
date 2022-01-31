@@ -1,0 +1,28 @@
+<div id="menuadmin">
+    <a class="menuadmintext" href="/sort">sort</a>
+    <a class="menuadmintext" href="/gender">gender</a>
+    <a class="menuadmintext" href="/show">show</a>
+</div>
+<div id="tabelka">
+    <p>mezczyzni i null</p>
+    <table>
+        {{#each mezczyzni }}
+        <tr>
+            <td class="td">id: {{id}}</td>
+            <td class="td">plec: {{plec}}</td>
+        </tr>
+        {{/each}}
+    </table>
+    <p>kobiety</p>
+    <table>
+        {{#each kobiety }}
+        <tr>
+            <td class="td">id: {{id}}</td>
+            <td class="td">plec: {{plec}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+<script>
+    document.getElementById("body").style.backgroundColor = "yellow"
+</script>

@@ -1,0 +1,51 @@
+<form action="/register" method="POST">
+    <table>
+        <tr>
+            <td>login:</td>
+            <td>
+                <input type="text" id="login" name="login">
+            </td>
+        </tr>
+        <tr>
+            <td>hasło:</td>
+            <td>
+                <input type="password" id="password" name="password">
+            </td>
+        </tr>
+        <tr>
+            <td>wiek:</td>
+            <td>
+                <select name="wiek" id="wiek"></select>
+            </td>
+        </tr>
+        <tr>
+            <td>Uczeń?:</td>
+            <td>
+                <input type="checkbox" id="uczen" name="uczen">
+            </td>
+        </tr>
+        <tr>
+            <td>Płeć:</td>
+            <td>
+
+                <input type="radio" id="kobieta" name="plec" value="k">
+                K
+                <input type="radio" id="mezczyzna" name="plec" value="m">
+                M
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit">
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    for (i = 1; i <= 115; i++) {
+        option = document.createElement("option")
+        option.value = i
+        option.innerHTML = i
+        document.getElementById("wiek").appendChild(option)
+    }
+</script>
